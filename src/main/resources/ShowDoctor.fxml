@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="698.0" prefWidth="1057.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ShowDoctor">
+   <children>
+      <BorderPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="698.0" prefWidth="982.0">
+         <left>
+            <VBox prefHeight="698.0" prefWidth="120.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Button contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" prefHeight="55.0" prefWidth="89.0" style="-fx-background-color: transparent;" stylesheets="@/style.css" text="Button">
+                     <graphic>
+                        <ImageView fitHeight="43.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@values/output-onlinegiftools(7).gif" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <VBox.margin>
+                        <Insets bottom="80.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" prefHeight="55.0" prefWidth="89.0" style="-fx-background-color: transparent;" stylesheets="@/style.css" text="Button">
+                     <graphic>
+                        <ImageView fitHeight="50.0" fitWidth="47.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@values/output-onlinegiftools(8).gif" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" prefHeight="55.0" prefWidth="89.0" style="-fx-background-color: transparent;" stylesheets="@/style.css" text="Button">
+                     <graphic>
+                        <ImageView fitHeight="43.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@values/output-onlinegiftools(6).gif" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" prefHeight="55.0" prefWidth="89.0" style="-fx-background-color: transparent;" stylesheets="@/style.css" text="Button">
+                     <graphic>
+                        <ImageView fitHeight="43.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@values/output-onlinegiftools(1).gif" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" prefHeight="55.0" prefWidth="89.0" style="-fx-background-color: transparent;" stylesheets="@/style.css" text="Button">
+                     <graphic>
+                        <ImageView fitHeight="60.0" fitWidth="58.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@values/output-onlinegiftools.gif" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" onAction="#redirectToChatBot" prefHeight="55.0" prefWidth="89.0" style="-fx-background-color: transparent;" stylesheets="@/style.css" text="Button">
+                     <graphic>
+                        <ImageView fitHeight="43.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@values/icons8-bookmark.gif" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" prefHeight="55.0" prefWidth="89.0" style="-fx-background-color: transparent;" stylesheets="@/style.css" text="Button">
+                     <graphic>
+                        <ImageView fitHeight="43.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@values/output-onlinegiftools(5).gif" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <VBox.margin>
+                        <Insets top="150.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button fx:id="logoutButton" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" prefHeight="55.0" prefWidth="89.0" style="-fx-background-color: transparent;" stylesheets="@/style.css" text="Button">
+                     <graphic>
+                        <ImageView fitHeight="43.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@values/output-onlinegiftools(3).gif" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </VBox>
+         </left>
+         <center>
+            <AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="699.0" prefWidth="866.0" BorderPane.alignment="CENTER">
+               <children>
+                  <AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="698.0" prefWidth="815.0">
+                     <children>
+                        <VBox layoutX="314.0" prefHeight="698.0" prefWidth="634.0" styleClass="secondary-color" stylesheets="@style.css">
+                           <children>
+                              <HBox prefHeight="11.0" prefWidth="562.0">
+                                 <children>
+                                    <Label prefHeight="46.0" prefWidth="210.0" text="Doctor List">
+                                       <font>
+                                          <Font name="Impact" size="36.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="30.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <ImageView fitHeight="25.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
+                                       <HBox.margin>
+                                          <Insets left="120.0" top="10.0" />
+                                       </HBox.margin>
+                                       <image>
+                                          <Image url="@values/output-onlinegiftools(9).gif" />
+                                       </image>
+                                    </ImageView>
+                                    <TextField fx:id="searchtext" style="-fx-background-radius: 50;">
+                                       <HBox.margin>
+                                          <Insets left="10.0" top="10.0" />
+                                       </HBox.margin>
+                                    </TextField>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets bottom="15.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="449.0" prefWidth="522.0">
+                                 <content>
+                                    <VBox fx:id="doctorListVBox" minHeight="-Infinity" minWidth="-Infinity" prefHeight="573.0" prefWidth="518.0">
+                                       <padding>
+                                          <Insets left="30.0" />
+                                       </padding></VBox>
+                                 </content>
+                                 <VBox.margin>
+                                    <Insets left="45.0" />
+                                 </VBox.margin>
+                              </ScrollPane>
+                           </children>
+                           <padding>
+                              <Insets left="15.0" top="50.0" />
+                           </padding>
+                        </VBox>
+
+                        <VBox alignment="CENTER" layoutY="128.0" prefHeight="468.0" prefWidth="310.0" styleClass="chosen_profile" stylesheets="@style.css">
+                           <children>
+                              <VBox>
+                                 <children>
+                                    <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                                       <children>
+                                          <Label prefHeight="67.0" prefWidth="144.0" text="Doctor Profile">
+                                             <font>
+                                                <Font name="Impact" size="21.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                              <ImageView fx:id="doctorImageView" fitHeight="84.0" fitWidth="114.0" pickOnBounds="true" preserveRatio="true" />
+                              <HBox prefHeight="67.0" prefWidth="310.0">
+                                 <children>
+                                    <Label prefHeight="52.0" prefWidth="119.0" text="Fullname: ">
+                                       <font>
+                                          <Font name="Impact" size="14.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin>
+                                    </Label>
+                                    <Label fx:id="DoctorFullname" prefHeight="52.0" prefWidth="167.0">
+                                       <font>
+                                          <Font name="Impact" size="14.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets left="10.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <HBox layoutX="10.0" layoutY="317.0" prefHeight="72.0" prefWidth="310.0">
+                                 <children>
+                                    <Label prefHeight="52.0" prefWidth="122.0" text="Speciality: ">
+                                       <font>
+                                          <Font name="Impact" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="DoctorSpecialite" prefHeight="52.0" prefWidth="167.0">
+                                       <font>
+                                          <Font name="Impact" size="14.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets left="10.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <HBox layoutX="10.0" layoutY="343.0" prefHeight="74.0" prefWidth="310.0">
+                                 <children>
+                                    <Label prefHeight="52.0" prefWidth="122.0" text="Adress: ">
+                                       <font>
+                                          <Font name="Impact" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="DoctorAdress" prefHeight="52.0" prefWidth="167.0">
+                                       <font>
+                                          <Font name="Impact" size="14.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets left="10.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <HBox layoutX="10.0" layoutY="369.0" prefHeight="70.0" prefWidth="310.0">
+                                 <children>
+                                    <Label prefHeight="52.0" prefWidth="122.0" text="Phone: ">
+                                       <font>
+                                          <Font name="Impact" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="DoctorPhone" prefHeight="52.0" prefWidth="167.0">
+                                       <font>
+                                          <Font name="Impact" size="14.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets left="10.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <HBox alignment="CENTER" layoutX="10.0" layoutY="408.0" prefHeight="70.0" prefWidth="310.0">
+                                 <children>
+                                    <Button fx:id="reserver" mnemonicParsing="false" styleClass="profile_button" stylesheets="@style.css" text="Make Appointment" textFill="WHITE">
+                                       <font>
+                                          <Font size="13.0" />
+                                       </font>
+                                    </Button>
+                                 </children>
+                              </HBox>
+                           </children>
+                           <padding>
+                              <Insets left="15.0" />
+                           </padding>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

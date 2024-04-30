@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<StackPane prefHeight="600.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.UpdateAdmin">
+   <children>
+      <AnchorPane fx:id="root" prefHeight="612.0" prefWidth="1106.0">
+          <children>
+              <BorderPane prefHeight="626.0" prefWidth="1106.0">
+                  <left>
+                  <AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="180.0" BorderPane.alignment="CENTER">
+                     <children>
+                            <VBox layoutY="-27.0" prefHeight="681.0" prefWidth="182.0" stylesheets="@dashboardDesign.css">
+                                <children>
+                                    <VBox alignment="CENTER" prefHeight="210.0" prefWidth="182.0">
+                                        <VBox.margin>
+                                            <Insets />
+                                        </VBox.margin>
+                                        <children>
+                                            <ImageView fx:id="userImageView" fitHeight="108.0" fitWidth="117.0">
+                                                <styleClass>
+                                                    <String fx:value="ImageView" />
+                                                    <String fx:value="rounded-image" />
+                                                </styleClass>
+                                                <image>
+                                                    <Image url="@values/default.png" />
+                                                </image>
+                                            </ImageView>
+                                            <Label fx:id="usernameLabel" alignment="CENTER" contentDisplay="CENTER" prefHeight="18.0" prefWidth="103.0" textAlignment="CENTER" textFill="WHITE">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets top="15.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                        </children>
+                                    </VBox>
+                                    <VBox prefHeight="302.0" prefWidth="249.0">
+                                        <children>
+                                            <HBox alignment="CENTER" prefHeight="68.0" prefWidth="230.0" styleClass="selected" stylesheets="style.css">
+                                                <children>
+                                                    <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                                        <image>
+                                                            <Image url="@values/update_icon-removebg-preview.png" />
+                                                        </image>
+                                                    </ImageView>
+                                                    <Button fx:id="profileButton" mnemonicParsing="false" onAction="#RedirectToProfile" prefHeight="26.0" prefWidth="117.0" styleClass="nav-btn" stylesheets="@dashboardDesign.css" text="Profile" textFill="#fffdfd" />
+                                                </children>
+                                       <VBox.margin>
+                                          <Insets top="20.0" />
+                                       </VBox.margin>
+                                            </HBox>
+                                    <HBox alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" prefHeight="46.0" prefWidth="182.0">
+                                       <children>
+                                          <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@values/view-removebg-preview.png" />
+                                             </image>
+                                          </ImageView>
+                                          <MenuButton mnemonicParsing="false" prefHeight="30.0" prefWidth="118.0" styleClass="nav-btn" stylesheets="@dashboardDesign.css" text="Profile" textFill="#fffdfd">
+                                             <items>
+                                                <MenuItem onAction="#showUserAction" text="Show User" />
+                                                <MenuItem onAction="#showDoctorAction" text="Show Doctor" />
+                                             </items>
+                                          </MenuButton>
+                                       </children>
+                                    </HBox>
+                                            <HBox alignment="CENTER" prefHeight="64.0" prefWidth="230.0" styleClass="selected" stylesheets="style.css">
+                                                <children>
+                                                    <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                                        <image>
+                                                            <Image url="@values/update_icon-removebg-preview.png" />
+                                                        </image>
+                                                    </ImageView>
+                                                    <Button fx:id="modifyButton" mnemonicParsing="false" prefHeight="26.0" prefWidth="117.0" styleClass="nav-btn" stylesheets="@dashboardDesign.css" text="Modify Account" textFill="#fffdfd" />
+                                                </children>
+                                            </HBox>
+                                            <HBox alignment="CENTER" prefHeight="74.0" prefWidth="230.0" styleClass="selected" stylesheets="style.css">
+                                                <children>
+                                                    <ImageView fitHeight="42.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                                        <image>
+                                                            <Image url="@values/delete_image-removebg-preview.png" />
+                                                        </image>
+                                                    </ImageView>
+                                                    <Button fx:id="deleteButton" mnemonicParsing="false" onAction="#handleDeleteButton" prefHeight="26.0" prefWidth="119.0" styleClass="nav-btn" stylesheets="@dashboardDesign.css" text="Delete Account" textFill="#fffefe" />
+                                                </children>
+                                            </HBox>
+                                    <HBox alignment="CENTER" prefHeight="74.0" prefWidth="230.0" styleClass="selected" stylesheets="style.css">
+                                       <children>
+                                          <ImageView fitHeight="36.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@values/logout-removebg-preview.png" />
+                                             </image>
+                                          </ImageView>
+                                          <Button fx:id="logoutButton" mnemonicParsing="false" onAction="#handleLogoutButton" prefHeight="26.0" prefWidth="119.0" styleClass="nav-btn" stylesheets="@dashboardDesign.css" text="Logout" textFill="#fffefe" />
+                                       </children>
+                                    </HBox>
+                                        </children>
+                                    </VBox>
+                                </children>
+                           <styleClass>
+                              <String fx:value="nav-form" />
+                              <String fx:value="shadow" />
+                           </styleClass>
+                            </VBox>
+                     </children>
+                  </AnchorPane>
+                  </left>
+                  <center>
+                  <AnchorPane prefHeight="746.0" prefWidth="926.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <AnchorPane>
+                           <children>
+                                  <VBox alignment="CENTER" layoutY="-26.0" prefHeight="674.0" prefWidth="924.0" stylesheets="@style.css">
+                                      <children>
+                                          <Label alignment="TOP_LEFT" prefHeight="90.0" prefWidth="500.0" text="Profile Settings" textFill="#383737">
+                                              <font>
+                                                  <Font name="Impact" size="36.0" />
+                                              </font>
+                                              <padding>
+                                                  <Insets bottom="10.0" left="30.0" right="50.0" top="20.0" />
+                                              </padding>
+                                          </Label>
+                                          <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="479.0" prefWidth="798.0" spacing="50.0" styleClass="nav-form" stylesheets="@dashboardDesign.css">
+                                              <padding>
+                                                  <Insets bottom="10.0" left="50.0" right="20.0" top="30.0" />
+                                              </padding>
+                                              <children>
+                                                  <Label alignment="TOP_LEFT" prefHeight="30.0" prefWidth="343.0" text="Profile Details" textFill="WHITE">
+                                                      <font>
+                                                          <Font name="System Bold" size="20.0" />
+                                                      </font>
+                                                      <padding>
+                                                          <Insets left="10.0" />
+                                                      </padding>
+                                                  </Label>
+                                                  <Label fx:id="errormessagelabel" alignment="CENTER" layoutX="60.0" layoutY="121.0" minHeight="-Infinity" prefHeight="22.0" prefWidth="606.0" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Label>
+                                                  <HBox alignment="CENTER_LEFT" minHeight="-Infinity" minWidth="-Infinity" prefHeight="97.0" prefWidth="426.0">
+                                                      <children>
+                                                          <Label prefHeight="26.0" prefWidth="110.0" text="Username:" textFill="WHITE">
+                                                              <font>
+                                                                  <Font name="System Bold" size="16.0" />
+                                                              </font>
+                                                          </Label>
+                                                          <Pane prefHeight="200.0" prefWidth="140.0">
+                                                              <children>
+                                                                  <TextField fx:id="updateusername" layoutY="35.0" prefHeight="26.0" prefWidth="115.0" style="-fx-background-radius: 50;" styleClass="text-input" stylesheets="@style.css" />
+                                                              </children>
+                                                          </Pane>
+                                                          <Label prefHeight="26.0" prefWidth="98.0" text="Fullname: " textFill="WHITE">
+                                                              <font>
+                                                                  <Font name="System Bold" size="16.0" />
+                                                              </font>
+                                                          </Label>
+                                                          <TextField fx:id="updatefullname" style="-fx-background-radius: 50;" styleClass="text-input" stylesheets="@style.css" />
+                                                      </children>
+                                                  </HBox>
+                                                  <HBox alignment="CENTER_LEFT" layoutX="60.0" layoutY="197.0" prefHeight="100.0" prefWidth="200.0">
+                                                      <children>
+                                                          <Label prefHeight="26.0" prefWidth="78.0" text="Email: " textFill="WHITE">
+                                                              <font>
+                                                                  <Font name="System Bold" size="16.0" />
+                                                              </font>
+                                                          </Label>
+                                                          <Pane prefHeight="200.0" prefWidth="140.0">
+                                                              <children>
+                                                                  <TextField fx:id="updateemail" prefHeight="26.0" prefWidth="129.0" style="-fx-background-radius: 50;" styleClass="text-input" stylesheets="@style.css" />
+                                                              </children>
+                                                          </Pane>
+                                                          <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                                                              <children>
+                                                                  <Label prefHeight="26.0" prefWidth="126.0" text="Phone: " textFill="WHITE">
+                                                                      <font>
+                                                                          <Font name="System Bold" size="16.0" />
+                                                                      </font>
+                                                                  </Label>
+                                                                  <Pane prefHeight="200.0" prefWidth="140.0">
+                                                                      <children>
+                                                                          <TextField fx:id="updatephone" prefHeight="26.0" prefWidth="174.0" style="-fx-background-radius: 50;" styleClass="text-input" stylesheets="@style.css" />
+                                                                      </children>
+                                                                  </Pane>
+                                                              </children>
+                                                          </HBox>
+                                                      </children>
+                                                  </HBox>
+                                                  <HBox alignment="CENTER" layoutX="60.0" layoutY="121.0" prefHeight="100.0" prefWidth="200.0">
+                                                      <children>
+                                                          <ImageView fx:id="userImageView1" fitHeight="75.0" fitWidth="94.0" pickOnBounds="true" preserveRatio="true" />
+                                                          <Pane />
+                                                          <Button fx:id="modifyimage" mnemonicParsing="false" onAction="#handleUploadImageClick" prefHeight="32.0" prefWidth="99.0" styleClass="import-btn" stylesheets="@dashboardDesign.css" text="Update Image" textFill="WHITE">
+                                                              <HBox.margin>
+                                                                  <Insets left="20.0" />
+                                                              </HBox.margin>
+                                                </Button>
+                                                      </children>
+                                                  </HBox>
+                                              </children>
+                                          </VBox>
+                                          <Button fx:id="updateButton" alignment="CENTER" mnemonicParsing="false" onAction="#handleUpdateButton" prefHeight="46.0" prefWidth="154.0" styleClass="delete-btn" stylesheets="@dashboardDesign.css" text="Save Changes" textFill="#fffdfd">
+                                              <VBox.margin>
+                                                  <Insets top="22.0" />
+                                              </VBox.margin>
+                                          </Button>
+                                      </children>
+                                  </VBox>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+                  </center>
+               <top>
+                  <AnchorPane prefHeight="77.0" prefWidth="1106.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <AnchorPane prefHeight="50.0" prefWidth="1099.0" styleClass="top-form" stylesheets="@dashboardDesign.css">
+                           <children>
+                              <Label layoutX="61.0" layoutY="6.0" text="VISITA DASHBOARD" />
+                              <Button layoutX="1039.0" layoutY="9.0" mnemonicParsing="false" prefHeight="14.0" prefWidth="50.0" styleClass="close" stylesheets="@dashboardDesign.css" text="X">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Button>
+                              <Button layoutX="977.0" layoutY="9.0" mnemonicParsing="false" prefHeight="14.0" prefWidth="50.0" styleClass="minimize" stylesheets="@dashboardDesign.css" text="-" />
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </top>
+              </BorderPane>
+      
+          </children>
+      </AnchorPane>
+   </children>
+</StackPane>

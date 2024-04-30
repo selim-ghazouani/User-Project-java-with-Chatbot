@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.AfficherAdmin">
+   <children>
+      <AnchorPane fx:id="root" minHeight="-Infinity" minWidth="-Infinity" prefHeight="612.0" prefWidth="1106.0">
+          <children>
+              <BorderPane prefHeight="626.0" prefWidth="1106.0">
+                  <left>
+                  <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="510.0" prefWidth="182.0" stylesheets="@dashboardDesign.css" BorderPane.alignment="CENTER">
+                     <children>
+                            <VBox layoutY="-43.0" prefHeight="553.0" prefWidth="182.0" stylesheets="@dashboardDesign.css">
+                                <children>
+                                    <VBox alignment="CENTER" prefHeight="222.0" prefWidth="182.0">
+                                        <VBox.margin>
+                                            <Insets />
+                                        </VBox.margin>
+                                        <children>
+                                            <ImageView fx:id="userImageView" fitHeight="100" fitWidth="100">
+                                       <image>
+                                          <Image url="@values/default.png" />
+                                       </image>
+                                    </ImageView>
+                                            <Label fx:id="usernameLabel" alignment="CENTER" contentDisplay="CENTER" prefHeight="18.0" prefWidth="103.0" textAlignment="CENTER" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets top="15.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                        </children>
+                                    </VBox>
+                                    <VBox prefHeight="302.0" prefWidth="249.0">
+                                        <children>
+                                            <HBox alignment="CENTER" prefHeight="75.0" prefWidth="182.0" styleClass="selected" stylesheets="style.css">
+                                                <children>
+                                                    <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                                        <image>
+                                                            <Image url="@values/update_icon-removebg-preview.png" />
+                                                        </image>
+                                                    </ImageView>
+                                                    <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="117.0" styleClass="nav-btn" stylesheets="@dashboardDesign.css" text="Profile" textFill="#fffdfd">
+                                             <HBox.margin>
+                                                <Insets />
+                                             </HBox.margin>
+                                          </Button>
+                                                </children>
+                                       <VBox.margin>
+                                          <Insets bottom="10.0" top="20.0" />
+                                       </VBox.margin>
+                                            </HBox>
+                                    <VBox>
+                                       <children>
+                                          <HBox alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" prefHeight="46.0" prefWidth="182.0">
+                                             <children>
+                                                <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@values/view-removebg-preview.png" />
+                                                   </image>
+                                                </ImageView>
+                                                          <MenuButton mnemonicParsing="false" prefHeight="30.0" prefWidth="118.0" styleClass="nav-btn" stylesheets="@dashboardDesign.css" text="Profile" textFill="#fffdfd">
+                                                              <items>
+                                                                  <MenuItem onAction="#showUserAction" text="Show User" />
+                                                                  <MenuItem onAction="#showDoctorAction" text="Show Doctor" />
+                                                                  <MenuItem onAction="#showAdminAction" text="Show Admin" />
+                                                              </items>
+                                                          </MenuButton>
+                                             </children>
+                                             <VBox.margin>
+                                                <Insets bottom="10.0" />
+                                             </VBox.margin>
+                                          </HBox>
+                                       </children>
+                                    </VBox>
+                                            <HBox alignment="CENTER" prefHeight="64.0" prefWidth="230.0" styleClass="selected" stylesheets="style.css">
+                                                <children>
+                                                    <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                                        <image>
+                                                            <Image url="@values/update_icon-removebg-preview.png" />
+                                                        </image>
+                                                    </ImageView>
+                                                    <Button mnemonicParsing="false" onAction="#RedirectToModifyAdmin" prefHeight="26.0" prefWidth="117.0" styleClass="nav-btn" stylesheets="@dashboardDesign.css" text="Modify Account" textFill="#fffdfd" />
+                                                </children>
+                                       <VBox.margin>
+                                          <Insets bottom="10.0" />
+                                       </VBox.margin>
+                                            </HBox>
+                                            <HBox alignment="CENTER" prefHeight="74.0" prefWidth="230.0" styleClass="selected" stylesheets="style.css">
+                                                <children>
+                                                    <ImageView fitHeight="42.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                                        <image>
+                                                            <Image url="@values/delete_image-removebg-preview.png" />
+                                                        </image>
+                                                    </ImageView>
+                                                    <Button fx:id="deleteButton" mnemonicParsing="false" onAction="#handleDeleteButton" prefHeight="26.0" prefWidth="119.0" styleClass="nav-btn" stylesheets="@dashboardDesign.css" text="Delete Account" textFill="#fffefe" />
+                                                </children>
+                                       <VBox.margin>
+                                          <Insets bottom="10.0" />
+                                       </VBox.margin>
+                                            </HBox>
+                                    <HBox alignment="CENTER" prefHeight="74.0" prefWidth="230.0" styleClass="selected" stylesheets="style.css">
+                                       <children>
+                                          <ImageView fitHeight="36.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@values/logout-removebg-preview.png" />
+                                             </image>
+                                          </ImageView>
+                                          <Button fx:id="logoutButton" mnemonicParsing="false" onAction="#handleLogoutButton" prefHeight="26.0" prefWidth="119.0" styleClass="nav-btn" stylesheets="@dashboardDesign.css" text="Logout" textFill="#fffefe" />
+                                       </children>
+                                    </HBox>
+                                        </children>
+                                    </VBox>
+                                </children>
+                           <styleClass>
+                              <String fx:value="nav-form" />
+                              <String fx:value="shadow" />
+                           </styleClass>
+                            </VBox>
+                     </children>
+                     <styleClass>
+                        <String fx:value="shadow" />
+                        <String fx:value="nav-form" />
+                     </styleClass>
+                  </AnchorPane>
+                  </left>
+                  <center>
+                  <AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="915.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <AnchorPane>
+                           <children>
+                                  <VBox layoutY="-15.0" prefHeight="545.0" prefWidth="893.0">
+                                      <children>
+                                    <HBox prefHeight="99.0" prefWidth="924.0">
+                                       <children>
+                                                <Label alignment="TOP_LEFT" prefHeight="86.0" prefWidth="276.0" text="Profile Settings" textFill="#383737">
+                                                    <font>
+                                                        <Font name="System Bold" size="25.0" />
+                                                    </font>
+                                                    <padding>
+                                                        <Insets bottom="30.0" left="30.0" right="50.0" top="20.0" />
+                                                    </padding>
+                                                </Label>
+                                          <Pane prefHeight="200.0" prefWidth="200.0" />
+                                          <HBox alignment="CENTER">
+                                             <children>
+                                                <ImageView fitHeight="33.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@values/update_icon-removebg-preview.png" />
+                                                   </image>
+                                                </ImageView>
+                                                <Button fx:id="addadmin" mnemonicParsing="false" onAction="#redirecttoaddadmin" prefHeight="26.0" prefWidth="117.0" styleClass="add-btn" stylesheets="@dashboardDesign.css" text="Add Admin" textFill="#fffdfd" />
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </HBox>
+                                          <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="395.0" prefWidth="681.0" spacing="50.0" styleClass="nav-form" stylesheets="@dashboardDesign.css">
+                                              <padding>
+                                                  <Insets bottom="30.0" left="50.0" right="20.0" top="30.0" />
+                                              </padding>
+                                              <children>
+                                                  <Label alignment="TOP_LEFT" prefHeight="65.0" prefWidth="343.0" text="Profile Details" textFill="WHITE">
+                                                      <font>
+                                                          <Font name="System Bold" size="20.0" />
+                                                      </font>
+                                                      <padding>
+                                                          <Insets left="10.0" />
+                                                      </padding>
+                                                  </Label>
+                                                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                                                      <children>
+                                                          <Label prefHeight="26.0" prefWidth="130.0" text="Username:" textFill="WHITE">
+                                                              <font>
+                                                                  <Font name="System Bold" size="16.0" />
+                                                              </font>
+                                                          </Label>
+                                                          <Pane prefHeight="200.0" prefWidth="140.0">
+                                                              <children>
+                                                                  <Label fx:id="usernameLabel1" layoutX="-7.0" layoutY="-2.0" prefHeight="37.0" prefWidth="150.0" textFill="WHITE" />
+                                                              </children>
+                                                          </Pane>
+                                                      </children>
+                                                  </HBox>
+                                                  <HBox alignment="CENTER" layoutX="60.0" layoutY="121.0" prefHeight="100.0" prefWidth="200.0">
+                                                      <children>
+                                                          <Label prefHeight="26.0" prefWidth="130.0" text="Fullname: " textFill="WHITE">
+                                                              <font>
+                                                                  <Font name="System Bold" size="16.0" />
+                                                              </font>
+                                                          </Label>
+                                                          <Label fx:id="fullnameLabel" prefHeight="18.0" prefWidth="142.0" textFill="WHITE" />
+                                                      </children>
+                                                  </HBox>
+                                                  <HBox alignment="CENTER" layoutX="60.0" layoutY="197.0" prefHeight="100.0" prefWidth="200.0">
+                                                      <children>
+                                                          <Label prefHeight="26.0" prefWidth="130.0" text="Email: " textFill="WHITE">
+                                                              <font>
+                                                                  <Font name="System Bold" size="16.0" />
+                                                              </font>
+                                                          </Label>
+                                                          <Pane prefHeight="200.0" prefWidth="140.0">
+                                                              <children>
+                                                                  <Label fx:id="emailLabel" layoutX="-12.0" layoutY="3.0" prefHeight="18.0" prefWidth="122.0" stylesheets="style.css" textFill="WHITE" />
+                                                              </children>
+                                                          </Pane>
+                                                      </children>
+                                                  </HBox>
+                                                  <HBox alignment="CENTER" layoutX="60.0" layoutY="273.0" prefHeight="100.0" prefWidth="200.0">
+                                                      <children>
+                                                          <Label prefHeight="26.0" prefWidth="130.0" text="Phone: " textFill="WHITE">
+                                                              <font>
+                                                                  <Font name="System Bold" size="16.0" />
+                                                              </font>
+                                                          </Label>
+                                                          <Pane prefHeight="200.0" prefWidth="140.0">
+                                                              <children>
+                                                                  <Label fx:id="usernameLabel1111" layoutX="22.0" layoutY="17.0" prefHeight="18.0" prefWidth="103.0" textFill="WHITE" />
+                                                                  <Label fx:id="phoneLabel" layoutX="22.0" layoutY="3.0" prefHeight="18.0" prefWidth="103.0" textFill="WHITE" />
+                                                              </children>
+                                                          </Pane>
+                                                      </children>
+                                                  </HBox>
+                                              </children>
+                                       <VBox.margin>
+                                          <Insets left="70.0" />
+                                       </VBox.margin>
+                                          </VBox>
+                                      </children>
+                                  </VBox>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+                  </center>
+               <top>
+                  <AnchorPane prefHeight="77.0" prefWidth="1106.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <AnchorPane layoutY="4.0" prefHeight="50.0" prefWidth="1099.0" styleClass="top-form" stylesheets="@dashboardDesign.css">
+                           <children>
+                              <Label layoutX="61.0" layoutY="6.0" text="VISITA DASHBOARD" />
+                              <Button layoutX="1039.0" layoutY="9.0" mnemonicParsing="false" prefHeight="14.0" prefWidth="50.0" styleClass="close" stylesheets="@dashboardDesign.css" text="X">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Button>
+                              <Button layoutX="977.0" layoutY="9.0" mnemonicParsing="false" prefHeight="14.0" prefWidth="50.0" styleClass="minimize" stylesheets="@dashboardDesign.css" text="-" />
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </top>
+              </BorderPane>
+      
+          </children>
+      </AnchorPane>
+   </children>
+</StackPane>
